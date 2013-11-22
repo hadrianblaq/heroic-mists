@@ -1,0 +1,35 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! The big featured header on the homepage, with the site logo and description }}
+    <section class="pure-u-1">
+        <section id="content">
+			{{! Everything inside the #post tags pulls data from the post }}
+			{{#post}}
+            <article class="main">
+                <!-- A single blog post -->
+                <header class="main-header">
+					<h1>{{{title}}}</h2>
+					<h2><time datetime="{{date format='YYYY-MM-DD'}}">{{date format='DD MMM YYYY'}}</time> &ndash; {{author}}</h2>
+                </header>
+				<section class="main-content">
+					{{content}}
+				</section>
+				<footer class="main-footer">
+					 {{#if tags}}<p>Tagged <i class="el-icon-chevron-right"></i>{{tags}}{{/if}}</p>
+				</footer>
+			</article>
+			{{/post}}
+
+			<nav class="pagination"><i class="el-icon-chevron-left"></i><a href="/">Back to articles</a></nav>
+        </section>
+		<footer id="footer">
+			<div class="inner">
+				 <section class="copyright">Content created by <a href="/">{{@blog.title}}</a> is available under <a href="http://creativecommons.org">Creative Commons</a> [<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/au/">CC BY-NC-SA</a>] licence.</section>
+				 <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org">&nbsp;Ghost</a></section>
+			</div>
+		</footer>
+    </section>
+	

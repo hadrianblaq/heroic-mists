@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+	<meta name="generator" content="Ghost 0.3.3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{! Styles'n'Scripts }}
+	<link rel="stylesheet" type="text/css" href="/assets/css/pure-0.3.0-min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/elusive-webfont.css">
+	<link rel="stylesheet/less" type="text/css" href="/assets/css/styles.css">
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="/rss/"/>
+	
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body>
+	<div class="pure-g-r" id="layout">
+		<header class="pure-u" id="header">
+			<hgroup class="titles">
+				<h1>{{@blog.title}}</h1>
+				<p>{{@blog.description}}</p>
+				<section class="social">
+					<a href="http://twitter.com/hadrianblaq"><i class="el-icon-twitter"></i></a>
+					<a href="http://au.linkedin.com/in/christopherlau/"><i class="el-icon-linkedin"></i></a>
+					<a href="http://github.com/hadrianblaq"><i class="el-icon-github"></i></a>
+				</section>			
+			</hgroup>
+		</header>
+		{{! Everything else gets inserted here }}
+		{{{body}}}
+
+		{{! Ghost outputs important scripts and data with this tag }}
+		{{ghost_foot}}
+	</div>
+	{{! The main JavaScript file for Casper }}
+	<script type="text/javascript" src="/assets/js/index.js"></script>
+</body>
+</html>

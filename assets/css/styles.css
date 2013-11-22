@@ -1,0 +1,386 @@
+/** Variables **/
+/** This is the Root Font Size **/
+/** Colour Palette **/
+/** Fonts **/
+@font-face {
+  font-family: Roboto;
+  src: url('../fonts/Roboto-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Roboto;
+  src: url('../fonts/Roboto-LightItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: Roboto;
+  src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: Roboto;
+  src: url('../fonts/Roboto-MediumItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'icons';
+  src: url('../fonts/icons.eot');
+  src: url('../fonts/icons.eot?#iefix') format('embedded-opentype'), url('../fonts/icons.woff') format('woff'), url('../fonts/icons.ttf') format('truetype'), url('../fonts/icons.svg#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Apply these base styles to all icons */
+.icon-ghost {
+  font-family: 'icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+}
+/* Each icon is created by inserting the corret character into the 
+   content of the :before pseudo element. Like a boss. */
+.icon-ghost:before {
+  content: "\e000";
+}
+/* ==========================================================================
+    Standard HTML Elements
+   ========================================================================== */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  max-height: 100%;
+}
+body {
+  background-color: #ececec;
+  color: #586e75;
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+  color: #586e75;
+  border-bottom: 1px solid #586e75;
+}
+a:hover {
+  color: #d33682;
+  border-bottom: 1px solid #d33682;
+}
+a:focus {
+  color: #d33682;
+  border-bottom: 1px solid #d33682;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Roboto, 'Helvetica Neue', Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+  margin: 0 0;
+  padding: 0 0;
+  font-weight: normal;
+}
+h1 {
+  font-size: 48px;
+  line-height: 48px;
+  margin-bottom: 0.3rem;
+}
+h2 {
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 0.3rem;
+}
+h3 {
+  font-size: 32px;
+  line-height: 32px;
+  margin-bottom: 0.3rem;
+}
+h4 {
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 0.2rem;
+}
+h5 {
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 0.2rem;
+}
+h6 {
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 0.2rem;
+}
+img {
+  max-width: 100%;
+}
+p {
+  font-family: Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.5rem;
+}
+code {
+  font-family: Consolas, Inconsolata, monospace, sans-serif;
+  font-size: 16px;
+}
+pre > code {
+  background-color: #f0f0f0;
+  padding: 4px 8px;
+  color: #586e75;
+  line-height: 1.5rem;
+  display: block;
+  white-space: pre;
+  overflow: auto;
+}
+pre {
+  padding: 0;
+  margin: 0 0 2rem;
+}
+pre code,
+tt {
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap;
+  border: none;
+}
+hr {
+  border: 0;
+  padding: 0;
+  display: block;
+  width: 80%;
+  margin: 16px auto 48px auto;
+  border-bottom: 1px solid #586e75;
+}
+blockquote {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 16px 32px;
+  padding: 4px 8px;
+  border-left: 3px solid #586e75;
+}
+blockquote p {
+  margin: 0.8rem 0;
+  font-style: italic;
+}
+blockquote small {
+  display: inline-block;
+  margin: 0.8em 0 0.8em 1.5em;
+  font-size: 0.9em;
+  font-style: italic;
+}
+/* ==========================================================================
+    Layout styles
+   ========================================================================== */
+#layout {
+  padding-right: 30%;
+  /* "right col (nav + list)" width */
+  position: relative;
+}
+#header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 30%;
+  background: #f0f0f0;
+  color: #586e75;
+  border-left: 1px solid #002b36;
+}
+#footer {
+  border-top: 1px solid #586e75;
+  text-align: center;
+  padding: 1.0rem 0 1.5rem;
+  bottom: 0;
+}
+#footer .inner {
+  text-transform: uppercase;
+  color: #93a1a1;
+  font-size: 11.2px;
+  line-height: 24px;
+}
+#content {
+  padding: 2.5rem 10rem;
+}
+.main {
+  padding-bottom: 2.0rem;
+  margin-bottom: 4.0rem;
+}
+.main .main-header h1 {
+  font-family: Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  line-height: 3.5rem;
+}
+.main .main-header h1 a {
+  border-bottom: none;
+  color: #586e75;
+}
+.main .main-header h1 a:hover {
+  color: #d33682;
+  border-bottom: 1px solid #d33682;
+}
+.main .main-header h2 {
+  color: #93a1a1;
+  font-family: Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 0;
+}
+.posts {
+  margin-bottom: 4.0rem;
+}
+.posts .posts-header {
+  margin: 0;
+  padding: 0;
+}
+.posts .posts-header h1 {
+  font-size: 32px;
+  text-transform: uppercase;
+}
+.posts .posts-header h1 a {
+  border-bottom: none;
+  color: #586e75;
+}
+.posts .posts-header h1 a:hover {
+  color: #d33682;
+  border-bottom: 1px solid #d33682;
+}
+.posts .posts-header h2 {
+  color: #93a1a1;
+  font-size: 12.8px;
+  text-transform: uppercase;
+  letter-spacing: 2.6666666666666665px;
+  line-height: 8px;
+}
+.poweredby a {
+  text-decoration: none;
+  border-bottom: none;
+}
+.poweredby a:hover {
+  border-bottom: none;
+}
+.hidden {
+  text-indent: -9999px;
+  visibility: hidden;
+  display: none;
+}
+.page_logo {
+  margin-top: 4.0em;
+}
+.titles {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 50% 15% 10% 15%;
+  text-align: left;
+}
+.titles h1 {
+  color: #002b36;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+.titles h2 {
+  color: #93a1a1;
+  font-size: 0.8em;
+  line-height: 17.6px;
+}
+.social {
+  margin: 1.5em 0 0 0;
+  font-size: 20.8px;
+}
+.social a {
+  margin-right: 0.5em;
+  color: #586e75;
+  text-decoration: none;
+  border-bottom: none;
+}
+.social a:hover {
+  color: #d33682;
+  text-decoration: none;
+  border-bottom: none;
+}
+.breaker {
+  text-transform: uppercase;
+  border-top: 1px solid #586e75;
+  border-bottom: 1px solid #586e75;
+  padding: 0.8rem 0;
+  font-size: 12.8px;
+  font-weight: normal;
+  letter-spacing: 0.1rem;
+}
+.pagination {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.8rem 0;
+  font-size: 12.8px;
+  font-weight: normal;
+  letter-spacing: 0.1rem;
+}
+@media (max-width: 1024px) {
+  #content {
+    padding: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  #layout {
+    padding: 0;
+  }
+  #header {
+    position: relative;
+    width: auto;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    border-left: 0;
+    border-bottom: 1px solid #002b36;
+  }
+  #content {
+    padding: 1.5em 1.0em;
+  }
+  .titles {
+    position: relative;
+    width: auto;
+    margin: 1.5em 1.0em;
+    padding: 0;
+  }
+}
+@media (max-width: 480px) {
+  #layout {
+    padding: 0;
+  }
+  #header {
+    position: relative;
+    width: auto;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    border-left: 0;
+    border-bottom: 1px solid #002b36;
+  }
+  #content {
+    padding: 1.5em 1.0em;
+  }
+  .content {
+    padding: 2em 1em 0;
+  }
+}
