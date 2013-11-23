@@ -27,12 +27,12 @@
 					<h1><a href="{{url}}">{{{title}}}</a></h1>
 					<h2><time datetime="{{date format='YYYY-MM-DD'}}">{{date format='DD MMM YYYY'}}</time> {{#if tags}}&ndash; {{tags}}{{/if}}</h2>
 				</header>
-				<p>{{excerpt characters="40"}}&hellip; <a href="{{@blog.url}}">read more.</a></p>
+				<p>{{excerpt characters="40"}}&hellip; <a href="{{url}}">read more.</a></p>
 			</article>
 			{{/if}}
 		{{/foreach}}
 
-		<nav class="pagination">{{pagination}}</nav>
+		{{pagination}}
 		
         </section>
 		<footer id="footer">

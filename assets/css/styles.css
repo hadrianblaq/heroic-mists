@@ -218,7 +218,7 @@ blockquote small {
 }
 .main {
   padding-bottom: 2.0rem;
-  margin-bottom: 4.0rem;
+  margin-bottom: 2.0rem;
 }
 .main .main-header h1 {
   font-family: Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -245,11 +245,12 @@ blockquote small {
   padding: 0;
 }
 .posts {
-  margin-bottom: 4.0rem;
+  margin: 1.5rem 0 2.5rem 0;
 }
 .posts .posts-header {
   margin: 0;
   padding: 0;
+  border-top: 1px dotted #93a1a1;
 }
 .posts .posts-header h1 {
   font-size: 32px;
@@ -341,13 +342,13 @@ blockquote small {
     padding: 1.5rem;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   #layout {
     padding: 0;
   }
   #header {
     position: relative;
-    width: auto;
+    width: 100%;
     text-align: left;
     margin: 0;
     padding: 0;
@@ -370,7 +371,7 @@ blockquote small {
   }
   #header {
     position: relative;
-    width: auto;
+    width: 100%;
     text-align: left;
     margin: 0;
     padding: 0;
